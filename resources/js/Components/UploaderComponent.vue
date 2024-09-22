@@ -12,8 +12,7 @@
                               d="M9 8.25H7.5a2.25 2.25 0 0 0-2.25 2.25v9a2.25 2.25 0 0 0 2.25 2.25h9a2.25 2.25 0 0 0 2.25-2.25v-9a2.25 2.25 0 0 0-2.25-2.25H15m0-3-3-3m0 0-3 3m3-3V15"/>
                     </svg>
 
-
-                    Upload {{ uploadType }}
+                    Upload
                     <span v-if="uploadProgress" class="ml-2">
                         ({{ uploadProgress }}%)
                     </span>
@@ -33,28 +32,6 @@ const uploadProgress = ref(0);
 const fileUpload = ref(null);
 
 const emit = defineEmits(['uploadWasCompleted',])
-
-const $props = defineProps({
-    uploadType: {
-        required: false,
-        type: String,
-        default: 'a resource'
-    },
-    folder: {
-        required: true,
-        type: String,
-    },
-    visibility: {
-        required: false,
-        type: String,
-        default: 'private'
-    },
-    returnKeyOnly: {
-        required: false,
-        type: Boolean,
-        default: false
-    }
-});
 
 function upload() {
 

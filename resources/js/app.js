@@ -12,7 +12,6 @@ const appName = import.meta.env.VITE_APP_NAME || 'Laravel';
 import Vapor from 'laravel-vapor'
 window.Vapor = Vapor
 
-
 createInertiaApp({
     title: (title) => `${title} - ${appName}`,
     resolve: (name) => resolvePageComponent(`./Pages/${name}.vue`, import.meta.glob('./Pages/**/*.vue')),
